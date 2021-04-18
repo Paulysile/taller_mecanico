@@ -1,0 +1,27 @@
+h2{
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.responsive {
+    width: 100%;
+    height: auto;
+    margin-top: 5%;
+    margin-bottom: 10%;
+  }
+
+.informacion{
+    margin-top: 5%;
+    margin-bottom: 10%;
+
+}
+
+footer{
+    text-align: center;
+    text-decoration-color: white;
+    font-weight: bold;
+    background-color: rgba(128, 128, 128, 0.541);
+    padding: 5%;
+    
+}
