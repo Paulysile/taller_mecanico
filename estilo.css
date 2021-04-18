@@ -1,9 +1,12 @@
+body{
+    background: linear-gradient(to bottom right, blue, white);
+}
+
 h2{
     margin-left: 5%;
     margin-top: 5%;
     margin-bottom: 5%;
 }
-
 
 .responsive {
     width: 100%;
@@ -20,10 +23,9 @@ h2{
 
 footer{
     text-align: center;
-    text-decoration-color: white;
+    color: white;
     font-weight: bold;
-    background-color: rgba(128, 128, 128, 0.541);
+    background-color: rgba(37, 36, 39, 0.952);
     padding: 5%;
-    margin-top: 10%;
-    
+    margin-top: 10%;    
 }
