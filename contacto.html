@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">   
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="container">
+
+        <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+            <fieldset>
+                
+                <legend><center><h2><b>Formulario De Contacto</b></h2></center></legend><br>              
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Nombre</label>  
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input  name="nombre" id="nombre" placeholder="Nombre" class="form-control eliminables"  type="text"	 onChange="cambio(this)">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label" >Apellido</label> 
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="last_name" placeholder="Apellido" class="form-control eliminables"  type="text" onChange="cambio(this)">
+                        </div>
+                    </div>
+                </div>
+             
+                <div class="form-group">
+                    <label class="col-md-4 control-label">E-Mail</label>  
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                            <input name="email" placeholder="E-Mail" class="form-control eliminables"  type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Numero</label>  
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                            <input name="contact_no" placeholder="(569)" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group"> 
+                    <label class="col-md-4 control-label"></label>
+                    <div class="col-md-4 selectContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                            <select onChange="select(this)" name="department" class="form-control selectpicker">
+                                <option value="">Selecciona una alternativa</option>
+                                <option value="1">Consulta</option>
+                                <option value="2">Felicitaciones</option>
+                                <option value="3">Cotizaciones</option>
+                                <option value="4">Trabaja Con Nosotros</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                   <center><label for="texto1"></label>
+                    <textarea name="texto1" rows="5" cols="43" ></textarea></center> 
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label"></label>
+                    <div class="col-md-4"><br>
+                        <button type="button" onClick="click()" class="btn btn-warning btn-block" >Enviar <span class="glyphicon glyphicon-send"></span></button>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+</div>
+</body>
+<footer>
+    <script type="text/javascript" src="javascript.js"></script>
+</footer>
+</html>
