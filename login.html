@@ -1,238 +1,138 @@
 <!DOCTYPE html>
 
 <style type="text/css">
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,500);
-body,
-html {
-  margin: 0;
-  height: 100%;
-}
+          body {
+        background-color: rgb(93, 93, 95);
+        font-family: 'Ubuntu', sans-serif;
+    }
+    
+    .main {
+        background-color: #fffdfd;
+        width: 400px;
+        height: 400px;
+        margin: 7em auto;
+        border-radius: 1.5em;
+        box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+    }
+    
+    .sign {
+        padding-top: 40px;
+        color:#070707;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: bold;
+        font-size: 23px;
+    }
+    
+    .un {
+    width: 76%;
+    color: rgb(7, 7, 7);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background: rgb(245, 247, 245);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid rgba(7, 72, 252, 0.02);
+    margin-bottom: 50px;
+    margin-left: 46px;
+    text-align: center;
+    margin-bottom: 27px;
+    font-family: 'Ubuntu', sans-serif;
+    }
+    
+    form.form1 {
+        padding-top: 40px;
+    }
+    
+    .pass {
+            width: 76%;
+    color: rgb(38, 50, 56);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background: rgba(136, 126, 126, 0.04);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.02);
+    margin-bottom: 50px;
+    margin-left: 46px;
+    text-align: center;
+    margin-bottom: 27px;
+    font-family: 'Ubuntu', sans-serif;
+    }
+    
+   
+    .un:focus, .pass:focus {
+        border: 2px solid rgba(0, 0, 0, 0.18) !important;
+        
+    }
+    
+    .submit {
+      cursor: pointer;
+        border-radius: 5em;
+        color: rgb(10, 10, 10);
+        background: linear-gradient(to right, #fafd2b, #f31919);
+        border: 0;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        font-family: 'Ubuntu', sans-serif;
+        margin-left: 35%;
+        font-size: 13px;
+        box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+    }
+    
+    .forgot {
+        text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+        color: #121312;
+        padding-top: 15px;
+    }
+    
+    a {
+        text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+        color: #070707;
+        text-decoration: none
+    }
+    
+    @media (max-width: 600px) {
+        .main {
+            border-radius: 0px;
+        }
+        
+        
 
-input {
-  border: none;
-}
 
-button:focus {
-  outline: none;
-}
-
-::-webkit-input-placeholder {
-  color: rgba(2, 2, 2, 0.993);
-}
-
-::-webkit-input-placeholder .input-line:focus +::input-placeholder {
-  color: rgb(7, 7, 7);
-}
-
-.highlight {
-  color: rgba(8, 12, 235, 0.8);
-  font-weight: 400;
-  cursor: pointer;
-  transition: color .2s ease;
-}
-
-.highlight:hover {
-  color: rgb(7, 4, 216);
-  transition: color .2s ease;
-}
-
-.spacing {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  height: 120px;
-  font-weight: 300;
-  text-align: center;
-  margin-top: 10px;
-  color: rgb(248, 245, 245)
-}
-
-.input-line:focus {
-  outline: none;
-  border-color: rgb(255, 5, 5);
-  -webkit-transition: all .2s ease;
-  transition: all .2s ease;
-}
-
-.ghost-round {
-  cursor: pointer;
-  background: none;
-  border: 1px solid rgb(255, 255, 255);
-  border-radius: 25px;
-  color: rgba(255, 255, 255, 0.973);
-  -webkit-align-self: flex-end;
-  -ms-flex-item-align: end;
-  align-self: flex-end;
-  font-size: 19px;
-  font-size: 1.2rem;
-  font-family: roboto;
-  font-weight: 300;
-  line-height: 2.5em;
-  margin-top: auto;
-  margin-bottom: 25px;
-  -webkit-transition: all .2s ease;
-  transition: all .2s ease;
-}
-
-.ghost-round:hover {
-  background: rgb(75, 4, 240);
-  color: #fff;
-  -webkit-transition: all .2s ease;
-  transition: all .2s ease;
-}
-
-.input-line {
-  background: none;
-  margin-bottom: 10px;
-  line-height: 2.4em;
-  color: #fff;
-  font-family: roboto;
-  font-weight: 300;
-  letter-spacing: 0px;
-  letter-spacing: 0.02rem;
-  font-size: 19px;
-  font-size: 1.2rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.65);
-  -webkit-transition: all .2s ease;
-  transition: all .2s ease;
-}
-
-.full-width {
-  width: 100%;
-}
-
-.input-fields {
-  margin-top: 25px;
-}
-
-.container {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  background: #eee;
-  height: 100%;
-}
-
-.content {
-  padding-left: 25px;
-  padding-right: 25px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: column;
-  -ms-flex-flow: column;
-  flex-flow: column;
-  z-index: 5;
-}
-
-.welcome {
-  font-weight: 200;
-  margin-top: 75px;
-  text-align: center;
-  font-size: 40px;
-  font-size: 2.5rem;
-  letter-spacing: 0px;
-  letter-spacing: 0.05rem;
-}
-
-.subtitle {
-  text-align: center;
-  line-height: 1em;
-  font-weight: 100;
-  letter-spacing: 0px;
-  letter-spacing: 0.02rem;
-}
-
-.menu {
-  background: rgba(0, 0, 0, 0.2);
-  width: 100%;
-  height: 50px;
-}
-
-.window {
-  z-index: 100;
-  color: #fff;
-  font-family: roboto;
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: column;
-  -ms-flex-flow: column;
-  flex-flow: column;
-  box-shadow: 0px 15px 50px 10px rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
-  height: 560px;
-  width: 360px;
-  background: #fff;
-}
-
-.overlay {
-  background: -webkit-linear-gradient(#070707, #fc0707);
-  background: linear-gradient(#838080);
-  opacity: 0.85;
-  filter: alpha(opacity=85);
-  height: 560px;
-  position: absolute;
-  width: 360px;
-  z-index: 1;
-}
-
-.bold-line {
-  background: #e7e7e7;
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-  margin: auto;
-  width: 100%;
-  height: 360px;
-  z-index: 1;
-  opacity:0.1;
-  background-size:cover;
-}
-
-@media (max-width: 500px) {
-  .window {
-    width: 100%;
-    height: 100%;
-  }
-  .overlay {
-    width: 100%;
-    height: 100%;
-  }
-}
 </style>
 
-
 <html>
-<div class='bold-line'></div>
-<div class='container'>
-  <div class='window'>
-    <div class='overlay'></div>
-    <div class='content'>
-      <div class='welcome'>INICIA SESIÓN O REGISTRATE</div>
-      <div class='subtitle'></div>
-      <div class='input-fields'>
-        <input type='text' placeholder='Username' class='input-line full-width'></input>
-        <input type='email' placeholder='Email' class='input-line full-width'></input>
-        <input type='password' placeholder='Password' class='input-line full-width'></input>
 
-      </div>
-      <div class='spacing'>Entrar con  <span class='highlight'>Google</span></div>
-      <div><button class='ghost-round full-width'>Ingresar</button></div>
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sign in</title>
+</head>
+
+<body>
+  <div class="main">
+    <p class="sign" align="center">Iniciar Sesion</p>
+    <form class="form1">
+      <input class="un " type="text" align="center" placeholder="Username">
+      <input class="pass" type="password" align="center" placeholder="Password">
+      <a class="submit" align="center">Entrar</a>
+      <p class="forgot" align="center"><a href="#">Olvidaste tu Contraseña?</p>
+            
+                
     </div>
-  </div>
-</div>
+     
+</body>
+
 </html>
+
