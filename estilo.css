@@ -30,12 +30,15 @@ footer{
     margin-top: 10%;    
 }
 h3{
-    color:lawngreen;
+    color:yellow;
+    font-weight: bold;
     
 }
 
 p{
+
     color:rgb(181, 233, 129);
+
     font-size: medium;
     font-weight: bold;
     
